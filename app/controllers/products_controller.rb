@@ -1,10 +1,16 @@
 class ProductsController < ApplicationController
+
+  before_filter :ensure_logged_in, :only => [:new, :edit, :destroy]
   def index
     @products = Product.all
   end
 
   def show
     @product = Product.find(params[:id])
+
+    if current_user
+      @review = @product.reviews.build
+    end
   end
 
   def new
@@ -17,6 +23,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    # saves product only if it is successful
     if @product.save
       redirect_to products_url
     else

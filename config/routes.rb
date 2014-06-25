@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
- resources :products
+ resources :products do
+  resources :reviews
+ end
+
  resources :users, :only => [:new, :create]
  resources :sessions, :only => [:new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
