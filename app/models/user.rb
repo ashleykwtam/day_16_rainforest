@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
 
   validates :email, :presence => true
   has_secure_password
+
+  validates_presence_of :name
 end
