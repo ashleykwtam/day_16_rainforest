@@ -4,14 +4,14 @@ A Bitmaker assignment to create a rails application that is a clone of Amazon. U
 
 The learning goals of this assignment is:
 * Routes
-..* Nested routes
-..* Named routes
+  * Nested routes
+  * Named routes
 * Controllers
 * Models
-..* Associations
+  * Associations
 * Views
-..* Adding links with view helpers
-..* Using partials
+  * Adding links with view helpers
+  * Using partials
 * Authentication (Login and Signup)
-..* Using sessions
-..* Using bcrypt gem
+  * Using sessions
+  * Using the bcrypt gem
