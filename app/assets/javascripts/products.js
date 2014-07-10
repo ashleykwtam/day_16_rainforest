@@ -15,10 +15,12 @@ $(document).on('ready page:load', function(){
     //   $('#products').html(data);
     // });
 
-    $.get('/products?search=' + searchValue)
-      .done(function(data){
-        console.log(data);
-        $('#products').html(data);
-      })
+    // $.get('/products?search=' + searchValue)
+    //   .done(function(data){
+    //     console.log(data);
+    //     $('#products').html(data);
+    //   });
+
+    $.getScript('/products?search=' + searchValue);
   });
 });
