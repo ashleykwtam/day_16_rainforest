@@ -1,6 +1,6 @@
 // $('#products').html("<%= escape_javascript(render @products) %>");
 
-$('#products').html("<%= j(render @products) %>");
+// $('#products').html("<%= j(render @products) %>");
 
-$('#products').append('<%= j render(@products) %>');
+$('#products').append("<%= j(render @products) %>");
 $('.pagination').replaceWith('<%= j paginate(@products) %>');
