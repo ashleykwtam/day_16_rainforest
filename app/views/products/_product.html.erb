@@ -1,10 +1,10 @@
 <tbody>
 <tr>
-  <td><%= product.name %></td>
-  <td><%= product.description %></td>
+  <td><%= link_to product_path( product.id) do %>
+    <%= product.name %>
+    <% end %>
+  </td>
+  <td><%= truncate(product.description, length: 100) %></td>
   <td><%= product.formatted_price %></td>
-  <td><%= link_to 'Show', product %></td>
-  <td><%= link_to 'Edit', edit_product_path(product) %></td>
-  <td><%= link_to 'Delete', product, method: :delete, data: {confirm: 'Are you sure'} %></td>
 </tr>
 </tbody>  
