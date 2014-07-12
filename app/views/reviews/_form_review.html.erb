@@ -1,17 +1,4 @@
 <%= form_for [@product, @review], :remote => true do |f| %>
-  <div id="review-form-errors">
-    <% if @review.errors.present? %>
-      <div id = "error_explanation">
-        <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being published</h2>
-        <ul>
-          <% @reviews.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-  </div>
-
   <div class = "field">
     <%= f.label :comment %><br>
     <%= f.text_area :comment %>

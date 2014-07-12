@@ -47,4 +47,18 @@
 //       .on('ajax:complete', function() {alert("complete!");});
 //     });
 //   })
-// </script>
+
+  $(function(){
+    $('#new_review')
+      .on('ajax:beforeSend', function(){
+        $("input[type='submit']")
+          .val("Saving...");
+          .attr("disabled", "disabled");
+      })
+      .on('ajax:complete', function(){
+        $("input[type='submit']")
+          .val("Create Review");
+          .removeAttr('disabled');
+      })
+  });
+</script>
