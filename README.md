@@ -15,3 +15,7 @@ The learning goals of this assignment is:
 * Authentication (Login and Signup)
   * Using sessions
   * Using the bcrypt gem
+* AJAX
+  * Search functionality
+  * Infinite scrolling and pagination
+  * Improved user experience when submitting forms
