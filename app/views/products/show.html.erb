@@ -29,9 +29,22 @@
     <%= render 'reviews' %>
   </div>
   
+  <div id="new_review">
   <h4>New Reviews</h4>
   <%= render '/reviews/form_review' %>
+  </div>
 
 <% else %>
   <p>Please <%= link_to "log in", new_session_path %> to add a review.</p>
 <% end %>
+
+<script>
+  $(document).ready(function(){
+    $("#new_review")
+      .on('ajax:beforeSend', function() {alert("loading!");})
+      .on('ajax:success', function(data, status, xhr) {alert("success!");})
+      .on('ajax:error', function(xhr, status, error) {alert("error!");})
+      .on('ajax:complete', function() {alert("complete!");});
+    });
+  })
+</script>
