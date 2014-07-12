@@ -1,5 +1,6 @@
-class Review < ActiveRecord::Base
+  class Review < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :product
+  validates :comment, :presence => true
 end
